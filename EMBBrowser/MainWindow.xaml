@@ -1,0 +1,31 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EMBBrowser"
+        xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="EMBBrowser.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="450" 
+        Width="800" 
+        WindowStyle="None" 
+        WindowStartupLocation="CenterOwner" 
+        Left="50" 
+        Top="60">
+    
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0"
+                      ResizeBorderThickness="0"/>
+    </WindowChrome.WindowChrome>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Wpf:WebView2 Name="_MainWindowWebView" 
+                      Grid.Row="0"
+                      Source="https://www.google.de" />
+
+    </Grid>
+</Window>
